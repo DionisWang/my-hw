@@ -1,0 +1,2 @@
+choose the number in the middle of the array and compare it with the number you're searching for and use the information gotten to 
+narrow it down to half the list then find the middle of that half and repeat.
