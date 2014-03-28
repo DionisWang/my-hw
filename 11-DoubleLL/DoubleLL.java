@@ -1,3 +1,4 @@
+//Partner is Anish Malhotra
 public class DoubleLL<E>{
 
     private class Node<E> {
@@ -24,22 +25,28 @@ public class DoubleLL<E>{
 	public void setPrev(Node<E> p){prev = p;}
 	public Node<E> getPrev(){return prev;}
     }
-
-    private Node<E> current;
-
+    private int length;
+    private Node<E> current, head;
+    public DoubleLL(){
+	insert(null);
+	head=current;
+    }
     public void insert(E d){
 	Node<E> n = new Node<E>(d);
 	if(current==null){
 	    current = n;
-	}
-	else {
+	    n.next=n;
+	    n.prev=n;
+	}	
+	else{
 	    n.next = current;
-	    n.prev = current.prev;
+	    n.prev=current.prev;
 	    if(current.prev!=null){
 		current.getPrev().setNext(n);
 	    }
 	    current.prev = n;
 	    current = n;
+	    length++;
 	}
     }
 
@@ -56,17 +63,27 @@ public class DoubleLL<E>{
 	if(current.getPrev() != null)
 	    current = current.getPrev();
     }
-
+    public int find(E d){
+	Node tmp=head.next;
+	for(int i=0;i<length;i++){
+	    if(tmp.getData().equals(d)){
+		return i;
+	    }
+	    if(tmp.next!=null){
+		tmp=tmp.next;
+	    }
+	}
+	return -1;
+    }
     public String toString() {
-	Node<E> tmp = current;
-	if (tmp == null)
-	    return "";
-	while(tmp.getPrev() != null)
-	    tmp = tmp.getPrev();
+	Node<E> tmp = head.next;
 	String s = "";
-	while(tmp != null) {
-	    s = s + tmp.getData() +" ";
-	    tmp = tmp.getNext();
+	for(int i=0;i<length;i++){
+	    s+=tmp+" ";
+	    tmp=tmp.getNext();
+	    if(tmp.equals(head)){
+		tmp=tmp.getNext();
+	    }
 	}
 	return s;
     }
@@ -82,9 +99,9 @@ public class DoubleLL<E>{
 	System.out.println(L);
 	System.out.println(L.getCurrent());
 	L.forward();
-	System.out.println(L);
 	System.out.println(L.getCurrent());
 	L.insert("inserted");
 	System.out.println(L);
+	System.out.println(L.find("world"));
     }
 }
