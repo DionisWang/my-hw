@@ -1,4 +1,4 @@
-//Partner is Anish Malhotra
+//Anish Malhotra and Dionis Wang
 public class DoubleLL<E>{
 
     private class Node<E> {
