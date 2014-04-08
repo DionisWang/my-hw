@@ -1,0 +1,87 @@
+Sorts-
+	Merge Sort = divide and conquer = nlogn.
+	Insertion Sort = n^2.
+	Selection Sort = n^2.
+	Bubble Sort = n^2.
+	worst case = most important
+	Overall matters so in the long run.
+O(n) order n is linear
+Linear search= loop through and search.
+Selection Agorithms
+10,3,9,7,14,2,5,6,3,12,1,,8,11
+kth smallest number
+nlgn+k O(nlgn) Sort then find nth element
+Other way:
+	return 1st smallest up to k. O(n^2).
+	Partition the array- rewrite such that every element less than 		nine(the pivot) is to to is left and the other to its right.
+	!.Select the pivot.
+	2.Partition the array around.
+	3.Repeat 1-2 until done.
+Times-
+	max 2n least n.
+	Insertion Sort  100000    3.5 sec
+	Selection Sort  50000     3.5 sec
+	Merge Sort      10000000  4~5 sec
+			40000000  17  sec
+               		50000000  Out of heap!
+	Quick Sort      10000000  9   sec
+	Quick Sort Worst Case = n^2.
+	Quick Sort Best Case = nlgn.
+Test Correction
+	2.2 RemoveCross
+		loop through row then loop again to move it.
+		loop through column then loop again to move it.
+		make the end row and column 0s.
+	3 fillgrid
+		recursive loop through possible adjacent squares.
+		Note: java goes through if, first to second statement 			so if check parameter before check grid[x][y] fails 			the program won't get to grid[x][y] and crash.
+Linked list
+	a list where one object points to the next without size are 		definite placement.
+	When adding to Linked list first set what new element points 		to then tell a player to point to other player. If done in 		incorrect order will lost a part of the list.
+	Creation in java(Node)
+	n1=new node uses block of mem which stores location data.
+	length(){
+	return length;
+	make instance variable length. Then do +1 or -1 for add and 		remove functions.
+	LinkedList had head current and tail in doublylinkedlist
+	priciple of locality data near data.
+	iterable = constant time. 
+proxy-
+	chrome/tools/editpreferences/advanced setting/network/proxy/ manual
+	repeat x2{
+	149.89.1.30
+	3128
+stack of something
+Stack:
+	push()-adds item to top of the stack.
+	pop()-removes the top item of the stack and returns it.
+	peek()-returns top element without removing it.
+	Last in first out (LIFO)
+	| f3 |
+	| f2 |
+	| f1 |
+	|main|
+stack-
+	single linked list
+	add to front 
+	no need for dummy node.
+hp 48 calculators > TI calculators
+postfix/reverse polish notation
+a+b is infix notation-
+	Ambiguous
+	need order of operation
+	great for algebra.
+(+ a b) is prefix/functional notation-
+	prefix has no ambiguity.
+	+ 1 2 3 4 5 no order of operation.
+postfix/rpn-
+	3 enter 4 enter +
+RPN calculator-
+	get input
+	if it's a number push it on the stack
+	in an operation pop top 2 items do operation and push result 
+	back on the stack.
+RPN miniproject-
+	read input for String by scanner.
+	if the input is +,-,*,/
+	takes 2 top 2 on stack calculate then push back.
