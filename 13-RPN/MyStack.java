@@ -20,7 +20,7 @@ public class MyStack {
     }
     public String pop() {
 	String s=L[top];
-	L[top]=null;
+	//L[top]=null; class agrees this isn't needed.
 	top--;
 	return s;
     }
@@ -30,7 +30,7 @@ public class MyStack {
     }
 
     public boolean isEmpty() {
-	return L[0] == null;
+	return top==-1;//taken from thomas
     }
 
     public int getSize() {
