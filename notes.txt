@@ -85,3 +85,13 @@ RPN miniproject-
 	read input for String by scanner.
 	if the input is +,-,*,/
 	takes 2 top 2 on stack calculate then push back.
+switch(input){
+	case(if) "+": ans = first + second: break:
+	case(else if) "-": ans = first - second: break(goes to the end)
+	n=0(else)
+}
+Queue(FIFO)
+	q.enqueue(x)-adds x to the back of the queue.
+	q.dequeue(x)-return x in the front of the q.
+	q.isEmpty().
+	q.front()-like peek().
