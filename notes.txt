@@ -95,3 +95,15 @@ Queue(FIFO)
 	q.dequeue(x)-return x in the front of the q.
 	q.isEmpty().
 	q.front()-like peek().
+http://stuycs-apcs-z.github.io/assignments.html
+news.ycombinator.com
+Array Queue
+Method 1- 
+	enqueue - adds to array adds 1 to tail.
+	dequeue - removes and shift a[0].
+Method 2- 
+	enqueue - adds to array adds 1 to tail.
+	dequeue - remove array[n] head++ if(full) shift everything time.
+Method 3- 
+	enqueue - adds 1 to tail.(wrapping around).
+	dequeue - removes n and adds to head.(wrapping around).
