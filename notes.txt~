@@ -121,14 +121,15 @@ Trees-
 			      (B) (C) (D)
 			       |  / \
 			      (E)(F)(G)
-1	B,C,D are children of A
-4	A is the parent of B,C,D
-9	B,C,D are siblings.
-8	B,C are internal nodes
-9	E,F,G,D are leaf nodes (nodes with 0 children).
-1	Height- loosely defined in this case 2, or 3
-7	Descendants- all children after node.
-9	Ancestors- all nodes leading from the node to root
-1	Full and Balance depends on trees
+	B,C,D are children of A.
+	A is the parent of B,C,D.
+	B,C,D are siblings.
+	B,C are internal nodes.
+	E,F,G,D are leaf nodes (nodes with 0 children).
+	Height- loosely defined in this case 2, or 3.
+	Descendants- all children after node.
+	Ancestors- all nodes leading from the node to root.
+	Full and Balance depends on trees.
 Binary Tree-
 	has one or two children all the time.
+	IP-149.89.17.91
