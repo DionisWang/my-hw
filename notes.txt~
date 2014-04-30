@@ -121,15 +121,51 @@ Trees-
 			      (B) (C) (D)
 			       |  / \
 			      (E)(F)(G)
-	B,C,D are children of A.
-	A is the parent of B,C,D.
-	B,C,D are siblings.
-	B,C are internal nodes.
-	E,F,G,D are leaf nodes (nodes with 0 children).
-	Height- loosely defined in this case 2, or 3.
-	Descendants- all children after node.
-	Ancestors- all nodes leading from the node to root.
-	Full and Balance depends on trees.
+1	B,C,D are children of A
+4	A is the parent of B,C,D
+9	B,C,D are siblings.
+8	B,C are internal nodes
+9	E,F,G,D are leaf nodes (nodes with 0 children).
+1	Height- loosely defined in this case 2, or 3
+7	Descendants- all children after node.
+9	Ancestors- all nodes leading from the node to root
+1	Full and Balance depends on trees
 Binary Tree-
 	has one or two children all the time.
-	IP-149.89.17.91
+Binary Search Tree-
+	given any node n with value v, all nodes on the left subtree have 		values < v and all nodes on the right subtree have values > v.
+	public Node search(int i){
+	   Node x = root;
+	   while(x!=null&&x.getData()!=i){
+		if(x.getData()>i){
+		   x=x.getLeft();
+		}else{
+		   x=x.getRight();
+	   	}
+	   }
+	   return x;
+	}
+	public void insert(int i){
+	   Node x = root;
+	   while(x.getLeft()!=null&&x.getRight()!=null){
+		if(x.getData()>i){
+		   x=x.getLeft();
+		}else{
+		   x=x.getRight();
+	   	}
+	   }
+	   if(x.getData()<i){
+		x.setRight(new Node(i));
+	   }else{
+		x.setLeft(new Node(i));
+	   }
+	}
+	Insertion - always insert as a new leaf
+	1.Search for the value	(make sure to stop before null).
+	
+	Delete-3 cases
+	we need a pointer to the parent of the node we want to delete.
+	piggyback search or use recursion.
+	(1) the node to delete is a leaf - set parent left or right 		pointer to null
+	(2) node has 1 child- set node left or right to child's left or 	right (not null nodes). There are 4 cases.
+	(3)node has 2 children- replace the deleted value with largest 		from left subtree.we find it by going to the left child and as far 		right as we can go. Then delete the node copied out.
