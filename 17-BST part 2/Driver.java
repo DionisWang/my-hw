@@ -12,15 +12,5 @@ public class Driver{
 	tree.insert(9);
 	tree.insert(3);
 	System.out.println(tree);
-	tree.delete(8);
-	for(int i=1;i<=10;i++){
-	    System.out.println(tree.search(i));
-	}
-	System.out.println("deleting 5");
-	tree.delete(5);
-	tree.delete(6);
-	for(int i=1;i<=10;i++){
-	    System.out.println(tree.search(i));
-	}
     }
 }

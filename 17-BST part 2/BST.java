@@ -63,14 +63,11 @@ public class BST{
 	    System.out.println("Element not found!");
 	    return;
 	}
-	if(pb.getLeft()!=null&&pb.getRight()!=null){
-	    System.out.println("case 3");
+	if(temp.getLeft()!=null&&temp.getRight()!=null){
 	    delete3(pb,x);
-	}else if(pb.getLeft()==null||pb.getRight()==null){
-	    System.out.println("case 2");
+	}else if(temp.getLeft()==null||temp.getRight()==null){
 	    delete2(pb,x);
 	}else{
-	    System.out.println("case 1");
 	    delete1(pb,x);
 	}
     }
@@ -85,18 +82,14 @@ public class BST{
 	if(n.getLeft()!=null&&n.getLeft().getData()==x){
 	    if(n.getLeft().getRight()!=null){
 		n.setLeft(n.getLeft().getRight());
-		System.out.println("case 2, 1");
 	    }else{
 		n.setLeft(n.getLeft().getLeft());
-		System.out.println("case 2, 2");
 	    }
 	}else{
 	    if(n.getRight().getLeft()!=null){
 		n.setRight(n.getRight().getLeft());
-		System.out.println("case 2, 3");
 	    }else{
 		n.setRight(n.getRight().getRight());
-		System.out.println("case 2, 4");
 	    }
 	}
     }
@@ -123,12 +116,17 @@ public class BST{
 	}
     }
     public String toString(){
-	return helper(root);
+	return print(root);
     }
-    public String helper(Node n){
+    //  return n+"\n"+print(n.getLeft())+print(n.getRight()); - pre-order traversal.
+    public String print(Node n){
 	if(n==null){
-	    return "n";
+	    return " ";
 	}
-	return n+"\n"+helper(n.getLeft())+" "+helper(n.getRight());
+	return print(n.getLeft())+n+"\n"+print(n.getRight());//- in order traversal.
+	//Post order traversal is:
+	//traverse(left);
+	//traverse(right);
+	//process node;
     }
 }
