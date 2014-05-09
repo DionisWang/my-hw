@@ -169,3 +169,12 @@ Binary Search Tree-
 	(1) the node to delete is a leaf - set parent left or right 		pointer to null
 	(2) node has 1 child- set node left or right to child's left or 	right (not null nodes). There are 4 cases.
 	(3)node has 2 children- replace the deleted value with largest 		from left subtree.we find it by going to the left child and as far 		right as we can go. Then delete the node copied out.
+	Special case- root gets deleted. Cheat buy using dummy node. 		smallest possible value.
+
+		Linked List                    Binary Search Tree
+		Unsorted List   Sorted List
+    	Search  O(log n)        O(log n)       Best case (log n) 
+					       Worst case O(n)
+	insert  O(1)            O(n)           same as search
+	delete  O(n)            O(n)           same as search
+	Trasversal O(n)         O(n)           O(n)
