@@ -1,0 +1,51 @@
+public class Driver{
+    public static void main(String[]args){
+	HeapSort heap = new HeapSort();
+	heap.add(1);
+	System.out.println(heap);
+	heap.add(2);
+	System.out.println(heap);
+	heap.add(4);
+	System.out.println(heap);
+	heap.add(3);
+	System.out.println(heap);
+	heap.add(5);
+	heap.add(6);
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	heap.add(1);
+	System.out.println(heap);
+	heap.add(2);
+	System.out.println(heap);
+	heap.add(4);
+	System.out.println(heap);
+	heap.add(3);
+	System.out.println(heap);
+	heap.add(5);
+	heap.add(6);
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+	System.out.println(heap.removeMax());
+	System.out.println(heap);
+    }
+}
