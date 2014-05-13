@@ -201,4 +201,10 @@ Data Structures- depending on goals make what you have to.
 Hash function- 
 	a function that maps a key value onto another value used as a data base index.
 Hash table-
-	array based data structure where you use hash function to convert key into array index.
+	array based data structure where you use hash function to convert key into array index. 
+	Clash/Collision- When 2 keys has to the same index.
+	Have large enough table and good has function to minimize.
+	Solution- 
+		Rehash use a secondary hash function to find another slot.
+		Closed hashing linear probing- just go down slots until you find an empty one.
+		leave extra slots.
