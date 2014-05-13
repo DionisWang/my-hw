@@ -178,3 +178,23 @@ Binary Search Tree-
 	insert  O(1)            O(n)           same as search
 	delete  O(n)            O(n)           same as search
 	Trasversal O(n)         O(n)           O(n)
+Heaps-
+	-binary tree
+	-as full as possible from left to right.
+	-if given any node n its value v is greater than the values of 		either of its children it is a maxheap.
+	if given any node n its value v is less than the values of either 		of its children it is a minheap.
+	findMax() is O(1) it is the root in a maxheap.
+	removeMax()- O(nlogn) -
+		1.remove max.
+		2.replace root with lowest rightest element.
+		3.pushDown() - O(logn) -
+			while(n is less than any children swap with 				greater value children.
+	add()- O(nlogn) -
+		1.add element as lowest rightest.
+		2.siftUp() - O(logn) -
+			swap node with parent if parent less than it 				restores heap property.
+Given node at location n its children is at 2n and 2n+1.
+Given node at n its parent is n/2.
+Using an array to map the heap.
+!Don't forget to adjust for the 0 in the array.
+Data Structures- depending on goals make what you have to.

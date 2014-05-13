@@ -1,6 +1,7 @@
 public class Driver{
     public static void main(String[]args){
-	HeapSort heap = new HeapSort();
+	MaxHeap heap = new MaxHeap();
+	MinHeap h = new MinHeap();
 	heap.add(1);
 	System.out.println(heap);
 	heap.add(2);
@@ -47,5 +48,26 @@ public class Driver{
 	System.out.println(heap);
 	System.out.println(heap.removeMax());
 	System.out.println(heap);
+	h.add(6);
+	System.out.println(h);
+	h.add(5);
+	System.out.println(h);
+	h.add(3);
+	System.out.println(h);
+	h.add(2);
+	System.out.println(h);
+	h.add(4);
+	h.add(1);
+	System.out.println(h);
+	System.out.println(h.removeMin());
+	System.out.println(h);
+	System.out.println(h.removeMin());
+	System.out.println(h);
+	System.out.println(h.removeMin());
+	System.out.println(h);
+	System.out.println(h.removeMin());
+	System.out.println(h);
+	System.out.println(h.removeMin());
+	System.out.println(h);
     }
 }

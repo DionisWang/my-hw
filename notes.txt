@@ -13,7 +13,7 @@ kth smallest number
 nlgn+k O(nlgn) Sort then find nth element
 Other way:
 	return 1st smallest up to k. O(n^2).
-	Partition the array- rewrite such that every element less than 		nine(the pivot) is to to is left and the other to its right.
+	Partition the array- rewrite such that every element less than nine(the pivot) is to to is left and the other to its right.
 	!.Select the pivot.
 	2.Partition the array around.
 	3.Repeat 1-2 until done.
@@ -34,15 +34,15 @@ Test Correction
 		make the end row and column 0s.
 	3 fillgrid
 		recursive loop through possible adjacent squares.
-		Note: java goes through if, first to second statement 			so if check parameter before check grid[x][y] fails 			the program won't get to grid[x][y] and crash.
+		Note: java goes through if, first to second statement so if check parameter before check grid[x][y] fails 			the program won't get to grid[x][y] and crash.
 Linked list
-	a list where one object points to the next without size are 		definite placement.
-	When adding to Linked list first set what new element points 		to then tell a player to point to other player. If done in 		incorrect order will lost a part of the list.
+	a list where one object points to the next without size are definite placement.
+	When adding to Linked list first set what new element points to then tell a player to point to other player. If done in 		incorrect order will lost a part of the list.
 	Creation in java(Node)
 	n1=new node uses block of mem which stores location data.
 	length(){
 	return length;
-	make instance variable length. Then do +1 or -1 for add and 		remove functions.
+	make instance variable length. Then do +1 or -1 for add and remove functions.
 	LinkedList had head current and tail in doublylinkedlist
 	priciple of locality data near data.
 	iterable = constant time. 
@@ -113,8 +113,8 @@ Graphs-
 	nodes contain information
 	edges connect nodes(and sometimes also a data)
 Trees-
-	*Definition 1* - empty or a connected a cyclic graph with one node 		designated as the root.
-	*Definition 2* - empty or contains one noded called the root the 		root can have 0 or more children nodes. each of which can have 0 		or more children nodes.
+	*Definition 1* - empty or a connected a cyclic graph with one node designated as the root.
+	*Definition 2* - empty or contains one noded called the root the root can have 0 or more children nodes. each of which can have 0 		or more children nodes.
 				Example (Tree)
 				  (A)-root
 				/  |  \
@@ -133,7 +133,7 @@ Trees-
 Binary Tree-
 	has one or two children all the time.
 Binary Search Tree-
-	given any node n with value v, all nodes on the left subtree have 		values < v and all nodes on the right subtree have values > v.
+	given any node n with value v, all nodes on the left subtree have values < v and all nodes on the right subtree have values > v.
 	public Node search(int i){
 	   Node x = root;
 	   while(x!=null&&x.getData()!=i){
@@ -166,10 +166,10 @@ Binary Search Tree-
 	Delete-3 cases
 	we need a pointer to the parent of the node we want to delete.
 	piggyback search or use recursion.
-	(1) the node to delete is a leaf - set parent left or right 		pointer to null
-	(2) node has 1 child- set node left or right to child's left or 	right (not null nodes). There are 4 cases.
-	(3)node has 2 children- replace the deleted value with largest 		from left subtree.we find it by going to the left child and as far 		right as we can go. Then delete the node copied out.
-	Special case- root gets deleted. Cheat buy using dummy node. 		smallest possible value.
+	(1) the node to delete is a leaf - set parent left or right pointer to null
+	(2) node has 1 child- set node left or right to child's left or right (not null nodes). There are 4 cases.
+	(3)node has 2 children- replace the deleted value with largest from left subtree.we find it by going to the left child and as far right as we can go. Then delete the node copied out.
+	Special case- root gets deleted. Cheat buy using dummy node. smallest possible value.
 
 		Linked List                    Binary Search Tree
 		Unsorted List   Sorted List
@@ -181,19 +181,24 @@ Binary Search Tree-
 Heaps-
 	-binary tree
 	-as full as possible from left to right.
-	-if given any node n its value v is greater than the values of 		either of its children it is a maxheap.
-	if given any node n its value v is less than the values of either 		of its children it is a minheap.
+	-if given any node n its value v is greater than the values of either of its children it is a maxheap.
+	if given any node n its value v is less than the values of either of its children it is a minheap.
 	findMax() is O(1) it is the root in a maxheap.
 	removeMax()- O(nlogn) -
 		1.remove max.
 		2.replace root with lowest rightest element.
 		3.pushDown() - O(logn) -
-			while(n is less than any children swap with 				greater value children.
+			while(n is less than any children swap with greater value children.
 	add()- O(nlogn) -
 		1.add element as lowest rightest.
 		2.siftUp() - O(logn) -
-			swap node with parent if parent less than it 				restores heap property.
+			swap node with parent if parent less than it restores heap property.
 Given node at location n its children is at 2n and 2n+1.
 Given node at n its parent is n/2.
 Using an array to map the heap.
 !Don't forget to adjust for the 0 in the array.
+Data Structures- depending on goals make what you have to.
+Hash function- 
+	a function that maps a key value onto another value used as a data base index.
+Hash table-
+	array based data structure where you use hash function to convert key into array index.
